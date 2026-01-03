@@ -140,13 +140,12 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
+    
     <script>
     (function(){
       emailjs.init("rg_-QP6Ykbxfpy1aP");
     })();
-    </script>
-    <script>
+    
     const noBtn = document.getElementById('noBtn');
     const yesBtn = document.getElementById('yesBtn');
     const mainScreen = document.getElementById('mainScreen');
@@ -166,13 +165,17 @@
         emailjs.send("service_4fmop55", "template_5f29mhq", {
             respuesta: "Claudia dijo que SÍ 💖",
             fecha: new Date().toLocaleString()
-        }).then(() => {
+        })
+        .then(() => {
             console.log("Email enviado 💌");
-        }).catch((error) => {
-            console.error("Error:", error);
+        })
+        .catch((error) => {
+            console.error("Error EmailJS:", error);
         });
     });
     </script>
+
 </body>
 </html>
+
 
